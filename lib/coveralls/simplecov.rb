@@ -39,7 +39,7 @@ module Coveralls
           properties[:name] = short_filename(file.filename)
 
           # Get the coverage
-          properties[:coverage] = file.coverage.dup
+          properties[:coverage] = file.coverage_data.dup
 
           # Skip nocov lines
           file.lines.each_with_index do |line, i|
